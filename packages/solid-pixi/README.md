@@ -6,8 +6,8 @@ This is an unofficial, experimental fork of [solid-pixi](https://github.com/samm
 
 ## Performance improvements
 
-- Uses Solid.js's native `spread` for prop updates to Pixi.js instances
-- Proper parent-child relationships through custom Solid renderer implementation
+- Uses Solid.js's native `spread` for prop updates to Pixi.js instances, which handles diffing much faster than I could do it myself.
+- Proper parent-child relationships through custom Solid renderer implementation (previously lead to lost reactive owners)
 - Reactive computations are paused when `renderable={false}` is set.
 - Removed Graphics `draw` prop. Use `<Graphics ref={(instance) => instance.lineTo(/*...*/)} />` to draw. Much more performant. Will auto-pause computation when using `ref` and setting `renderable={false}`, too. Alternatively, use `createEffect(() => instance.lineTo(/*...*/))` (set instance via `<Graphics as={instance} />`).
 
@@ -16,14 +16,13 @@ This is an unofficial, experimental fork of [solid-pixi](https://github.com/samm
 - Added `<Portal />` component
 - Streamlined API focused on core functionality
 -`Assets` => `useAssets` & `useAsset`
-- Events are currently not passed to Pixi.js instances (can be enabled by checking for `on` in renderer's spread)
+- Events are currently not passed to Pixi.js instances (can be rather easily added by handling them in the renderer's spread (see solid-js/web for inspiration))
 - Components in the `untouched` folder are not implemented
-
+- Added ability to use `setSize` (faster than setting width & height individually) via `size` prop, i.e. `size={{ width: 100, height: 100 }}`
 
 ## Current Limitations
 
-- Customized for specific use cases - not all original features are implemented
-- Type system issues (components don't return valid JSX.Element)
+- Customized for specific use cases - not all original features are implemented (events, components under `untouched/` folder)
 - JSX runtime integration needs work:
   - Components are not intrinsic elements (must be imported)
   - TypeScript complains about JSX.Element return types
