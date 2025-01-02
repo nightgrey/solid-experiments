@@ -1,8 +1,7 @@
 # solid-experiments
+⚠️ Note: This is **experimental** and **work in progress**. It might be broken. Feel free to explore and provide feedback, but use at your own risk!
 
-An experimental monorepo containing various Solid.js utilities and experiments. This is currently work in progress and primarily shared for interested parties from the Solid.js community.
-
-## Packages
+A repo containing Solid.js experiments. This is primarily shared for interested parties from the Solid.js community and the public.
 
 ### solid-pixi
 A high-performance fork of solid-pixi implemented using a custom renderer built with `solid-js/universal`. Provides improved performance through better integration with Solid.js's primitives.
@@ -14,12 +13,3 @@ A collection of styling utilities for SolidJS, featuring variants, slots, and st
 
 [Read more](packages/styled/README.md)
 
-## Development
-
-To install dependencies:
-
-```bash
-bun install
-```
-
-⚠️ Note: This is experimental work and might be broken. Feel free to explore and provide feedback, but use at your own risk!
