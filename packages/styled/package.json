@@ -1,0 +1,20 @@
+{
+  "name": "@nightgrey/styled",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "module": "src/index.tsx",
+  "types": "src/index.tsx",
+  "exports": {
+    ".": "./src/index.tsx"
+  },
+  "dependencies": {
+    "@corvu/utils": "^0.4.2",
+    "@solid-primitives/context": "^0.2.3",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.9.3",
+    "typescript": "^5.0.0"
+  }
+}

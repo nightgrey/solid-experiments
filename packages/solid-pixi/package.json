@@ -1,0 +1,24 @@
+{
+  "name": "@nightgrey/solid-pixi",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "module": "src/index.tsx",
+  "types": "src/index.tsx",
+  "exports": {
+    ".": "./src/index.tsx"
+  },
+  "dependencies": {
+    "ts-toolbelt": "^9.6.0"
+  },
+  "devDependencies": {
+    "pixi.js": "^8.6.6",
+    "solid-js": "^1.9.3",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "pixi.js": "^8.6.6",
+    "solid-js": "^1.9.3",
+    "typescript": "^5.0.0"
+  }
+}
