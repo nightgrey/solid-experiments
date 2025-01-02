@@ -15,7 +15,7 @@ This is an unofficial, experimental fork of [solid-pixi](https://github.com/samm
 
 - Added `<Portal />` component
 - Streamlined API focused on core functionality
--`Assets` => `useAssets` & `useAsset`
+- `Assets` => `useAssets` & `useAsset`
 - Events are currently not passed to Pixi.js instances (can be rather easily added by handling them in the renderer's spread (see solid-js/web for inspiration))
 - Components in the `untouched` folder are not implemented
 - Added ability to use `setSize` (faster than setting width & height individually) via `size` prop, i.e. `size={{ width: 100, height: 100 }}`
