@@ -1,4 +1,4 @@
-# @solid-experiments/styled
+# @nightgrey/styled
 
 An experimental collection of styling utilities for SolidJS, inspired by popular libraries like cva and styled-components.
 
