@@ -9,14 +9,16 @@ This is an unofficial, experimental fork of [solid-pixi](https://github.com/samm
 - Uses Solid.js's native `spread` for prop updates to Pixi.js instances
 - Proper parent-child relationships through custom Solid renderer implementation
 - Reactive computations are paused when `renderable={false}` is set.
-- Removed Graphics `draw` prop. Use `<Graphics ref={(instance) => instance.lineTo(/*...*/)} />` or `createEffect(() => instance.lineTo(/*...*/))` to draw.
+- Removed Graphics `draw` prop. Use `<Graphics ref={(instance) => instance.lineTo(/*...*/)} />` to draw. Much more performant. Will auto-pause computation when using `ref` and setting `renderable={false}`, too. Alternatively, use `createEffect(() => instance.lineTo(/*...*/))` (set instance via `<Graphics as={instance} />`).
 
 ## Notable Changes
 
 - Added `<Portal />` component
 - Streamlined API focused on core functionality
+-`Assets` => `useAssets` & `useAsset`
 - Events are currently not passed to Pixi.js instances (can be enabled by checking for `on` in renderer's spread)
 - Components in the `untouched` folder are not implemented
+
 
 ## Current Limitations
 
