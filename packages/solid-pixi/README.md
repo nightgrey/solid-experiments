@@ -72,6 +72,7 @@ Sam, the maintainer of solid-pixi, would be happy to upstream this. These are pe
 - [ ] Properly set up solid-js/universal / jsx-runtime
   - Fix types
   - Set up bundling by configuring vite/babel solid-js plugin to use our renderer (see references)
+- Avoid exception when hot reloading
 
 ### References
 
