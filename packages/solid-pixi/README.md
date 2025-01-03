@@ -61,3 +61,25 @@ function App() {
   )
 }
 ```
+
+## Todo & Notes
+
+Sam, the maintainer of solid-pixi, would be happy to upstream this. These are personal TODO notes to finish a PR.
+
+- [ ] Add the rest of the elements
+- [ ] Handle event props
+- [ ] Expose ways to use all assets functions (load, add, bundle, etc) via hooks
+- [ ] Properly set up solid-js/universal / jsx-runtime
+  - Fix types
+  - Set up bundling by configuring vite/babel solid-js plugin to use our renderer (see references)
+
+### References
+
+I found an example of a Vite and Babel config @  https://github.com/whoisryosuke/solid-universal-renderer-template/blob/main/packages/demo/vite.config.js.
+
+Additionally, some other universal implementations:
+- https://github.com/devinxi/vinxi/tree/main/packages/solid-three
+- https://github.com/SudoMaker/dominative-solid
+- https://github.com/devinxi/solid-ink/tree/e789c37f6685e9e03abbf918303abc5656d9c9c3, https://whoisryosuke.com/blog/2022/ditch-the-dom-with-solidjs-and-skia-canvaskit/
+
+
